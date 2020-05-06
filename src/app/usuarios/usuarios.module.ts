@@ -7,6 +7,11 @@ import { ListaComponent } from './vistas/lista/lista.component';
 import { DetalleComponent } from './vistas/detalle/detalle.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatTableModule} from "@angular/material/table";
+import {MatInputModule} from "@angular/material/input";
+import {MatRippleModule} from "@angular/material/core";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -15,7 +20,12 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     CommonModule,
     UsuariosRoutingModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule,
+    MatInputModule,
+    MatRippleModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class UsuariosModule { }
