@@ -12,6 +12,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatRippleModule} from "@angular/material/core";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {MatIconModule} from "@angular/material/icon";
     MatInputModule,
     MatRippleModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ]
 })
 export class UsuariosModule { }

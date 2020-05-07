@@ -1,5 +1,23 @@
-<button mat-button (click)="irPaginaLista()" color="accent">
-  <mat-icon>arrow_back_ios</mat-icon> volver
+<button mat-button (click)="irPaginaLista()" >
+  <mat-icon>arrow_back_ios</mat-icon> Atras
 </button>
-<p>detalle works!</p>
-<p>ID: {{id$ | async}}</p>
+<ng-container *ngIf="datos$ | async as datos">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{datos.name}}</mat-card-title>
+      <mat-card-subtitle>{{datos.symbol}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="obtenerImagenShiba(datos.position)" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        Some fancy description about this element<br/>
+        <span>Weigth: <b>{{datos.weight}}</b></span>
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>
